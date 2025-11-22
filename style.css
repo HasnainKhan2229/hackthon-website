@@ -1,0 +1,398 @@
+/* CSS Variables for Light Theme - Yeh variables puri file mein use honge */
+:root {
+    --primary-color: #8d0e0a;      /* Primary blue color for buttons */
+    --bg-color: #f0f2f5;           /* Background color for page */
+    --card-color: #ffffff;          /* Background color for cards/posts */
+    --text-color: #1c1e21;          /* Main text color */
+    --border-color: #dddfe2;        /* Border color for elements */
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Box shadow for cards */
+    --hover-color: #f8f9fa;         /* Background color on hover */
+}
+
+/* CSS Variables for Dark Theme - Jab dark mode active hoga */
+[data-theme="dark"] {
+    --primary-color: #1a074e;       /* Same primary color */
+    --bg-color: #0c0201;            /* Dark background */
+    --card-color: #111111;          /* Dark card background */
+    --text-color: #e4e6eb;          /* Light text for dark background */
+    --border-color: #3e4042;        /* Dark borders */
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* Darker shadow */
+    --hover-color: #3a3b3c;         /* Dark hover color */
+}
+
+/* Reset default browser styles - Har element ke margin/padding zero karna */
+* {
+    margin: 0;          /* Remove default margin */
+    padding: 0;         /* Remove default padding */
+    box-sizing: border-box;  /* Padding/border element ki width mein include ho */
+}
+
+/* Main body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Modern font stack */
+    background-color: var(--bg-color);  /* Use CSS variable for background */
+    color: var(--text-color);           /* Use CSS variable for text color */
+    transition: all 0.3s ease;          /* Smooth transitions for theme changes */
+    line-height: 1.6;                   /* Better text readability */
+}
+
+/* Main container for centering content */
+.container {
+    max-width: 600px;       /* Maximum width on large screens */
+    margin: 0 auto;         /* Center container horizontally */
+    padding: 20px;          /* Space inside container */
+}
+
+/* Header section styling */
+.header {
+    display: flex;                  /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and theme button */
+    align-items: center;            /* Vertically center items */
+    margin-bottom: 20px;            /* Space below header */
+    padding-bottom: 15px;           /* Space inside bottom */
+    border-bottom: 1px solid var(--border-color);  /* Bottom border line */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 24px;        /* Large font size */
+    font-weight: bold;      /* Bold text */
+    color: var(--primary-color);  /* Use primary color */
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+    background: none;       /* No background */
+    border: none;           /* No border */
+    font-size: 20px;        /* Icon size */
+    cursor: pointer;        /* Pointer cursor on hover */
+    color: var(--text-color);  /* Use text color */
+}
+
+/* Search box styling */
+.search-box {
+    width: 100%;                    /* Full width */
+    padding: 12px 15px;             /* Space inside */
+    margin-bottom: 20px;            /* Space below */
+    border: 1px solid var(--border-color);  /* Border with variable color */
+    border-radius: 20px;            /* Rounded corners */
+    background-color: var(--card-color);  /* Card background color */
+    color: var(--text-color);       /* Text color */
+    font-size: 14px;                /* Font size */
+}
+
+/* Filter controls container */
+.controls {
+    display: flex;          /* Flexbox layout */
+    gap: 10px;              /* Space between buttons */
+    margin-bottom: 20px;    /* Space below */
+    flex-wrap: wrap;        /* Allow wrapping on small screens */
+}
+
+/* Filter button styling */
+.filter-btn {
+    padding: 8px 16px;                  /* Space inside button */
+    border: 1px solid var(--border-color);  /* Border */
+    border-radius: 20px;                /* Rounded corners */
+    background-color: var(--card-color);  /* Background color */
+    color: var(--text-color);           /* Text color */
+    cursor: pointer;                    /* Pointer cursor */
+    font-size: 14px;                    /* Font size */
+    transition: all 0.2s;               /* Smooth hover effects */
+}
+
+/* Active filter button styling */
+.filter-btn.active {
+    background-color: var(--primary-color);  /* Primary background */
+    color: white;                       /* White text */
+    border-color: var(--primary-color); /* Primary border */
+}
+
+/* Post creation section styling */
+.create-post {
+    background-color: var(--card-color);  /* Card background */
+    border-radius: 10px;               /* Rounded corners */
+    padding: 15px;                     /* Space inside */
+    margin-bottom: 20px;               /* Space below */
+    box-shadow: var(--shadow);         /* Add shadow */
+}
+
+/* Post input textarea styling */
+.post-input {
+    width: 100%;                    /* Full width */
+    min-height: 100px;              /* Minimum height */
+    border: 1px solid var(--border-color);  /* Border */
+    border-radius: 8px;             /* Slightly rounded corners */
+    padding: 12px;                  /* Space inside */
+    margin-bottom: 10px;            /* Space below */
+    background-color: var(--bg-color);  /* Background color */
+    color: var(--text-color);       /* Text color */
+    resize: vertical;               /* Allow vertical resizing only */
+    font-family: inherit;           /* Inherit font from body */
+}
+
+/* Image URL input styling */
+.image-url-input {
+    width: 100%;                    /* Full width */
+    padding: 10px;                  /* Space inside */
+    border: 1px solid var(--border-color);  /* Border */
+    border-radius: 8px;             /* Rounded corners */
+    margin-bottom: 10px;            /* Space below */
+    background-color: var(--bg-color);  /* Background color */
+    color: var(--text-color);       /* Text color */
+}
+
+/* Post action buttons container */
+.post-actions {
+    display: flex;                  /* Flexbox layout */
+    justify-content: space-between; /* Space between emoji and post button */
+    align-items: center;            /* Vertically center */
+}
+
+/* Emoji button styling */
+.emoji-btn {
+    background: none;       /* No background */
+    border: none;           /* No border */
+    font-size: 20px;        /* Icon size */
+    cursor: pointer;        /* Pointer cursor */
+    color: var(--text-color);  /* Text color */
+}
+
+/* Post button styling */
+.post-btn {
+    padding: 8px 20px;              /* Space inside */
+    background-color: var(--primary-color);  /* Primary background */
+    color: white;                   /* White text */
+    border: none;                   /* No border */
+    border-radius: 20px;            /* Rounded corners */
+    cursor: pointer;                /* Pointer cursor */
+    font-weight: 600;               /* Bold text */
+}
+
+/* Disabled post button styling */
+.post-btn:disabled {
+    background-color: var(--border-color);  /* Gray background */
+    cursor: not-allowed;            /* Not allowed cursor */
+}
+
+/* Posts feed container */
+.posts-feed {
+    display: flex;              /* Flexbox layout */
+    flex-direction: column;     /* Stack posts vertically */
+    gap: 15px;                  /* Space between posts */
+}
+
+/* Individual post styling */
+.post {
+    background-color: var(--card-color);  /* Card background */
+    border-radius: 10px;        /* Rounded corners */
+    padding: 15px;              /* Space inside */
+    box-shadow: var(--shadow);  /* Add shadow */
+}
+
+/* Post header (time and action buttons) */
+.post-header {
+    display: flex;                  /* Flexbox layout */
+    justify-content: space-between; /* Space between time and buttons */
+    align-items: center;            /* Vertically center */
+    margin-bottom: 10px;            /* Space below */
+}
+
+/* Post time styling */
+.post-time {
+    font-size: 12px;        /* Small font */
+    color: #65676b;         /* Gray color */
+}
+
+/* Post content area */
+.post-content {
+    margin-bottom: 15px;    /* Space below */
+}
+
+/* Post image styling */
+.post-image {
+    max-width: 100%;        /* Don't exceed container width */
+    border-radius: 8px;     /* Slightly rounded corners */
+    margin-top: 10px;       /* Space above image */
+}
+
+/* Post action buttons (like, reactions) */
+.post-actions {
+    display: flex;                  /* Flexbox layout */
+    justify-content: space-between; /* Space between like and reactions */
+    align-items: center;            /* Vertically center */
+    border-top: 1px solid var(--border-color);  /* Top border */
+    padding-top: 10px;              /* Space above buttons */
+}
+
+/* Like button styling */
+.like-btn {
+    display: flex;              /* Flexbox for icon and text */
+    align-items: center;        /* Vertically center */
+    gap: 5px;                   /* Space between icon and count */
+    background: none;           /* No background */
+    border: none;               /* No border */
+    cursor: pointer;            /* Pointer cursor */
+    color: var(--text-color);   /* Text color */
+    padding: 5px 10px;          /* Space inside */
+    border-radius: 5px;         /* Slightly rounded */
+    transition: background-color 0.2s;  /* Smooth hover */
+}
+
+/* Like button hover effect */
+.like-btn:hover {
+    background-color: var(--hover-color);  /* Light background on hover */
+}
+
+/* Liked state styling (when post is liked) */
+.like-btn.liked {
+    color: #f91880;     /* Pink color for liked state */
+}
+
+/* Delete button styling */
+.delete-btn {
+    background: none;           /* No background */
+    border: none;               /* No border */
+    cursor: pointer;            /* Pointer cursor */
+    color: #f02849;             /* Red color */
+    padding: 5px 10px;          /* Space inside */
+    border-radius: 5px;         /* Slightly rounded */
+    transition: background-color 0.2s;  /* Smooth hover */
+}
+
+/* Delete button hover effect */
+.delete-btn:hover {
+    background-color: rgba(240, 40, 73, 0.1);  /* Light red background */
+}
+
+/* Edit button styling */
+.edit-btn {
+    background: none;                   /* No background */
+    border: none;                       /* No border */
+    cursor: pointer;                    /* Pointer cursor */
+    color: var(--primary-color);        /* Primary color */
+    padding: 5px 10px;                  /* Space inside */
+    border-radius: 5px;                 /* Slightly rounded */
+    transition: background-color 0.2s;  /* Smooth hover */
+}
+
+/* Edit button hover effect */
+.edit-btn:hover {
+    background-color: rgba(24, 119, 242, 0.1);  /* Light blue background */
+}
+
+/* Emoji picker dropdown styling */
+.emoji-picker {
+    display: none;                  /* Hidden by default */
+    position: absolute;             /* Position relative to parent */
+    background: var(--card-color);  /* Card background */
+    border: 1px solid var(--border-color);  /* Border */
+    border-radius: 8px;             /* Rounded corners */
+    padding: 10px;                  /* Space inside */
+    box-shadow: var(--shadow);      /* Add shadow */
+    z-index: 10;                    /* Show above other elements */
+}
+
+/* Individual emoji styling */
+.emoji {
+    cursor: pointer;        /* Pointer cursor */
+    padding: 5px;           /* Space around emoji */
+    font-size: 20px;        /* Emoji size */
+}
+
+/* Emoji hover effect */
+.emoji:hover {
+    background-color: var(--hover-color);  /* Background on hover */
+    border-radius: 5px;     /* Rounded corners */
+}
+
+/* Modal overlay styling */
+.modal {
+    display: none;                      /* Hidden by default */
+    position: fixed;                    /* Fixed position */
+    top: 0;                            /* Top of screen */
+    left: 0;                           /* Left of screen */
+    width: 100%;                       /* Full width */
+    height: 100%;                      /* Full height */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black */
+    z-index: 100;                      /* Show above everything */
+    justify-content: center;           /* Center horizontally */
+    align-items: center;               /* Center vertically */
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: var(--card-color);  /* Card background */
+    padding: 20px;                  /* Space inside */
+    border-radius: 10px;            /* Rounded corners */
+    width: 90%;                     /* 90% of screen width */
+    max-width: 500px;               /* Maximum width */
+}
+
+/* Modal action buttons container */
+.modal-actions {
+    display: flex;                  /* Flexbox layout */
+    justify-content: flex-end;      /* Align buttons to right */
+    gap: 10px;                      /* Space between buttons */
+    margin-top: 15px;               /* Space above buttons */
+}
+
+/* Cancel button styling */
+.cancel-btn {
+    padding: 8px 16px;                  /* Space inside */
+    border: 1px solid var(--border-color);  /* Border */
+    border-radius: 5px;                 /* Slightly rounded */
+    background-color: var(--card-color);  /* Card background */
+    color: var(--text-color);           /* Text color */
+    cursor: pointer;                    /* Pointer cursor */
+}
+
+/* Confirm button styling (for delete) */
+.confirm-btn {
+    padding: 8px 16px;      /* Space inside */
+    border: none;           /* No border */
+    border-radius: 5px;     /* Slightly rounded */
+    background-color: #f02849;  /* Red background */
+    color: white;           /* White text */
+    cursor: pointer;        /* Pointer cursor */
+}
+
+/* Reactions container */
+.reactions {
+    display: flex;      /* Flexbox layout */
+    gap: 5px;           /* Space between reaction buttons */
+    margin-top: 10px;   /* Space above reactions */
+}
+
+/* Individual reaction button */
+.reaction-btn {
+    background: none;       /* No background */
+    border: none;           /* No border */
+    font-size: 18px;        /* Icon size */
+    cursor: pointer;        /* Pointer cursor */
+    padding: 5px;           /* Space inside */
+    border-radius: 50%;     /* Circular button */
+    transition: transform 0.2s;  /* Smooth scale animation */
+}
+
+/* Reaction button hover effect */
+.reaction-btn:hover {
+    transform: scale(1.2);  /* Slightly enlarge on hover */
+}
+
+/* Mobile responsiveness - For screens smaller than 480px */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;      /* Less padding on mobile */
+    }
+    
+    .header {
+        flex-direction: column;  /* Stack logo and theme button */
+        gap: 10px;               /* Space between stacked items */
+        align-items: flex-start; /* Align to left */
+    }
+    
+    .controls {
+        justify-content: center;  /* Center filter buttons */
+    }
+}
